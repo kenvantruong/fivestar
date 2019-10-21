@@ -258,7 +258,7 @@
                                 font-weight: 400;">
                                         How did you find us?
                                 </h6>
-                                    <select name="How did you us?" class="form-control" id="exampleFormControlSelect1" style="    font-size: 14px;
+                                    <select  onchange="checkOptions(this) " name="How did you us?" class="form-control" id="exampleFormControlSelect1" style="    font-size: 14px;
                                         font-family: sans-serif;
                                         color: #535353;
                                         background: transparent;
@@ -268,13 +268,27 @@
                                         padding: 0 15px;
                                         outline: none;
                                         position: relative;
-                                        outline: none;">
-                                            <option name="none selected">Please choose option</option>
+                                        outline: none;" placeholder="test">
+                                            <option name="none selected" disabled selected>Please choose option</option>
+                                            <option name="yelp">Yelp</option>
                                             <option name="googleSearch">Google Search</option>
                                             <option name="newspaper">Newspaper</option>
-                                            <option name="yelp">Yelp</option>
                                             <option name="friendReferred">Friend Referred</option>
+                                            <option value="Other">Other</option>
                                     </select>
+                                    
+                                    <input name='otherInput' id='otherInput' type="text" placeholder="" style="display: none; font-size: 14px;
+                                    font-family: sans-serif;
+                                    color: #535353;
+                                    background: transparent;
+                                    width: 100%;
+                                    border: 1px solid #535353;
+                                    height: 40px;
+                                    padding: 0 15px;
+                                    outline: none;
+                                    position: relative;
+                                    outline: none; margin-top: 5px;" />
+
                                 <div class="form-group call-back-btn" style="margin-bottom: 0px; margin-top: 23px;">
                                     <button type="submit" name="submit" class="xs-btn xs-v2-btn">Submit</button>
                                     <label class="call-us-number">Or Call US - <span>(707) 654-0436</span></label>
@@ -288,7 +302,18 @@
     </div><!-- .container end -->
 </section><!-- End  video section -->
 
-
+<script type="text/javascript">
+        var otherInput;
+        function checkOptions(select) {
+        otherInput = document.getElementById('otherInput');
+        if (select.options[select.selectedIndex].value == "Other") {
+            otherInput.style.display = 'block';
+        }
+        else {
+            otherInput.style.display = 'none';
+        }
+        }
+</script>
 
 
 
