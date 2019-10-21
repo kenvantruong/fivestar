@@ -192,7 +192,7 @@
 
 
 <!-- start video section -->
-<section class="video-sec" style="margin: 0px 0px 167px 0px;">
+<section class="video-sec" style="margin: 151px 0;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-7 xs-padding-0 align-self-center">
@@ -229,10 +229,11 @@
                                 font-family: 'Poppins', sans-serif;
                                 color: #ededed;
                                 line-height: 28px;
-                                display: block; font-weight: 400;">
+                                display: block;
+                                font-weight: 400;">
                                         How did you find us?
                                 </h6>
-                                    <select name="How did you find us?" class="form-control" id="exampleFormControlSelect1" style="    font-size: 14px;
+                                    <select  onchange="checkOptions(this)" name="How did you us?" class="form-control" id="exampleFormControlSelect1" style="    font-size: 14px;
                                         font-family: sans-serif;
                                         color: #535353;
                                         background: transparent;
@@ -242,13 +243,29 @@
                                         padding: 0 15px;
                                         outline: none;
                                         position: relative;
-                                        outline: none;">
-                                            <option name="none selected">Please choose option</option>
+                                        outline: none;" placeholder="test">
+                                            <option name="none selected" disabled selected>Please choose option</option>
+                                            <option name="yelp">Yelp</option>
                                             <option name="googleSearch">Google Search</option>
                                             <option name="newspaper">Newspaper</option>
-                                            <option name="yelp">Yelp</option>
                                             <option name="friendReferred">Friend Referred</option>
+                                            <option value="Other">Other</option>
+
+                                            <input name='Other Input' id='otherInput' type="text" placeholder="" style="display: none; font-size: 14px;
+                                    font-family: sans-serif;
+                                    color: #535353;
+                                    background: transparent;
+                                    width: 100%;
+                                    border: 1px solid #535353;
+                                    height: 40px;
+                                    padding: 0 15px;
+                                    outline: none;
+                                    position: relative;
+                                    outline: none; margin-top: 5px;" />
                                     </select>
+                                    
+                                    
+
                                 <div class="form-group call-back-btn" style="margin-bottom: 0px; margin-top: 23px;">
                                     <button type="submit" name="submit" class="xs-btn xs-v2-btn">Submit</button>
                                     <label class="call-us-number">Or Call US - <span>(707) 654-0436</span></label>
