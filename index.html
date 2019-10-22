@@ -239,16 +239,16 @@
             <!-- --------FORM SUBMISSION------- -->
                             <form action="POST" data-netlify="true" class="call-back-form">
                                 <div class="form-group">
-                                    <input type="text" name="Name" value="" placeholder="Your Name" class="call-back-inp">
+                                    <input type="text" name="Name" value="" placeholder="Your Name" class="call-back-inp" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="Describe your project in detail.." value="" placeholder="Describe your project in detail.." class="call-back-inp">
+                                    <input type="text" name="Describe your project in detail.." value="" placeholder="Describe your project in detail.." class="call-back-inp" required>
                                 </div> 
                                 <div class="form-group">
-                                    <input type="number" name="Phone Number" value="" placeholder="Phone Number " class="call-back-inp">
+                                    <input type="number" name="Phone Number" value="" placeholder="Phone Number " class="call-back-inp" required>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" name="Email" value="" placeholder="Email " class="call-back-inp">
+                                <div class="form-group" >
+                                    <input type="email" name="Email" value="" placeholder="Email " class="call-back-inp" required>
                                 </div> 
                                 <h6 class="call-contact-text" style="margin-bottom: 15px; font-size: 14px;
                                 font-family: 'Poppins', sans-serif;
@@ -258,7 +258,8 @@
                                 font-weight: 400;">
                                         How did you find us?
                                 </h6>
-                                    <select  onchange="checkOptions(this)" name="How did you us?" class="form-control" id="exampleFormControlSelect1" style="    font-size: 14px;
+                                    <select onchange="checkOptions(this)" name="How did you us?" class="form-control" id="exampleFormControlSelect1" style="       
+                                        font-size: 14px;
                                         font-family: sans-serif;
                                         color: #535353;
                                         background: transparent;
@@ -268,8 +269,8 @@
                                         padding: 0 15px;
                                         outline: none;
                                         position: relative;
-                                        outline: none;" placeholder="test">
-                                            <option name="none selected" disabled selected>Please choose option</option>
+                                        outline: none;" required>
+                                            <option disabled value="" selected hidden>Please choose option</option>
                                             <option name="yelp">Yelp</option>
                                             <option name="googleSearch">Google Search</option>
                                             <option name="newspaper">Newspaper</option>
@@ -277,17 +278,17 @@
                                             <option value="Other">Other</option>
 
                                             <input name='Other Input' id='otherInput' type="text" placeholder="" style="display: none; font-size: 14px;
-                                    font-family: sans-serif;
-                                    color: #535353;
-                                    background: transparent;
-                                    width: 100%;
-                                    border: 1px solid #535353;
-                                    height: 40px;
-                                    padding: 0 15px;
-                                    outline: none;
-                                    position: relative;
-                                    outline: none; margin-top: 5px;" />
-                                    </select>
+                                                font-family: sans-serif;
+                                                color: #535353;
+                                                background: transparent;
+                                                width: 100%;
+                                                border: 1px solid #535353;
+                                                height: 40px;
+                                                padding: 0 15px;
+                                                outline: none;
+                                                position: relative;
+                                                outline: none; margin-top: 5px;"/>
+                                        </select>
                                     
                                     
 
@@ -305,16 +306,16 @@
 </section><!-- End  video section -->
 
 <script type="text/javascript">
-        var otherInput;
-        function checkOptions(select) {
-        otherInput = document.getElementById('otherInput');
-        if (select.options[select.selectedIndex].value == "Other") {
-            otherInput.style.display = 'block';
-        }
-        else {
-            otherInput.style.display = 'none';
-        }
-        }
+    var otherInput;
+    function checkOptions(select) {
+    otherInput = document.getElementById('otherInput');
+    if (select.options[select.selectedIndex].value == "Other") {
+        otherInput.style.display = 'block';
+    }
+    else {
+        otherInput.style.display = 'none';
+    }
+    }
 </script>
 
 
